@@ -1,18 +1,17 @@
-import { getRandomUsers } from "@/actions/user.action"
+import { getRandomUsers } from "@/actions/user.action";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import Link from "next/link";
-
 import { Avatar, AvatarImage } from "./ui/avatar";
 import FollowButton from "./FollowButton";
 
-
-const WhotoFollow = async () => {
+async function WhoToFollow() {
   const users = await getRandomUsers();
-  if(users.length === 0) return null;
+
+  if (users.length === 0) return null;
 
   return (
     <Card>
-       <CardHeader>
+      <CardHeader>
         <CardTitle>Who to Follow</CardTitle>
       </CardHeader>
       <CardContent>
@@ -38,9 +37,7 @@ const WhotoFollow = async () => {
           ))}
         </div>
       </CardContent>
-     
     </Card>
-  )
+  );
 }
-
-export default WhotoFollow
+export default WhoToFollow;
