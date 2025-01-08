@@ -1,6 +1,7 @@
 import { getPosts } from "@/actions/post.action";
 import { getDbUserId } from "@/actions/user.action";
-import { CreatePost } from "@/components/CreatePost";
+import CreatePost from "@/components/CreatePost";
+
 import PostCard from "@/components/PostCard";
 import WhotoFollow from "@/components/WhotoFollow";
 import { currentUser } from "@clerk/nextjs/server";
